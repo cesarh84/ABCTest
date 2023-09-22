@@ -1,10 +1,5 @@
 ﻿using Productos.Models;
-//using System;
-//using System.Collections.Generic;
 using System.Configuration;
-//using System.Linq;
-//using System.Runtime.Remoting.Activation;
-//using System.Web;
 using System.Web.Mvc;
 
 namespace Productos.Controllers
@@ -35,18 +30,5 @@ namespace Productos.Controllers
             return View();
         }
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
     }
 }

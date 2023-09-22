@@ -1,12 +1,6 @@
-﻿//using System;
-//using System.Collections.Generic;
-using System.Data.SqlClient;
-//using System.Data;
+﻿using System.Data.SqlClient;
 using System.Linq;
-//using System.Net;
-//using System.Net.Http;
 using System.Web.Http;
-//using System.Xml.Linq;
 using Productos.Models;
 
 namespace Productos.Controllers
@@ -20,29 +14,6 @@ namespace Productos.Controllers
     {
 
         private Model1 db = new Model1();
-
-        //[HttpGet]
-        //public IHttpActionResult GetId(int id)
-        //{
-        //    var customerFake = "customer-fake";
-        //    return Ok(customerFake);
-        //}
-
-        //[HttpGet]
-        //public IHttpActionResult GetAll()
-        //{
-        //    var customersFake = new string[] { "customer-1", "customer-2", "customer-3" };
-        //    return Ok(customersFake);
-        //}
-
-        //[HttpPost]
-        //[Route("TEST")]
-        //public IHttpActionResult TEST(Parametros.AgregarExistenciaProducto body)
-        //{
-        //    var customersFake = new string[] { "customer-1", "customer-2", "customer-3" };
-        //    return Ok(customersFake);
-        //}
-
 
         /// <summary>
         /// Enpoint para agregar existencias a un producto
@@ -101,33 +72,6 @@ namespace Productos.Controllers
             result.Id_Producto = idProducto;
 
             return result;
-        }
-
-        //// GET api/<controller>
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        //// GET api/<controller>/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //// POST api/<controller>
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //// PUT api/<controller>/5
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        //// DELETE api/<controller>/5
-        //public void Delete(int id)
-        //{
-        //}
+        }       
     }
 }

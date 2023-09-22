@@ -2,17 +2,7 @@
 using Productos.Models;
 using RestSharp;
 using System;
-//using System.Collections.Generic;
-//using System.Configuration;
-//using System.IO;
-//using System.Linq;
-//using System.Net;
-//using System.Net.Http;
 using System.Text;
-//using System.Text.Json;
-//using System.Text.Json.Nodes;
-//using System.Threading.Tasks;
-//using System.Web;
 
 namespace Productos.Controllers
 {
