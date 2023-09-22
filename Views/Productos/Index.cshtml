@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Productos.Models.Producto>
+
+@{
+    ViewBag.Title = "ABC Productos";
+}
+
+<h2>ABC Productos</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create",null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Estatus
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            Precio Detalle
+        </th>
+        <th>
+            Precio Mayoreo
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Posicion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CT_Estatus.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioDetalle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMayoreo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Posicion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_Producto }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id_Producto })
+        </td>
+    </tr>
+}
+
+</table>

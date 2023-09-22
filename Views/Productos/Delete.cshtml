@@ -1,0 +1,64 @@
+﻿@model Productos.Models.Producto
+
+@{
+    ViewBag.Title = "Borrado";
+}
+
+<h2>Borrado</h2>
+
+<h3>¿Estas seguro de borrarlo?</h3>
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_Estatus.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_Estatus.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioDetalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioDetalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioMayoreo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioMayoreo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posicion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

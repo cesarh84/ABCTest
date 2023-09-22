@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Productos.Models.Existencias>
+
+@{
+    ViewBag.Title = "ABC Existencias";
+}
+
+<h2>ABC Existencias</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Productos.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Existencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Productos.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Existencia)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_Producto}) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id_Producto })
+        </td>
+    </tr>
+}
+
+</table>
