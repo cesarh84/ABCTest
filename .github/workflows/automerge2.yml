@@ -1,16 +1,20 @@
-name: automerge2
+name: automarge2
 on:
-  pull_request:
-    types: [labeled]
+  push:
+    branches:
+      - '*'
 jobs:
-  merge-branch:
+  sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
 
-      - name: Merge by labeled
-        uses: cesarh84/merge-branch@main
+      - name: Merge DEV1 -> main
+        uses: devmasx/merge-branch@main
         with:
-          label_name: 'merged in develop'
-          target_branch: 'DEV1'
+          type: now
+          from_branch: DEV1
+          target_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      
