@@ -2,17 +2,17 @@ name: automerge2
 on:
   push:
     branches:
-      - 'release/*'
+      - 'DEV1'
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
 
-      - name: Merge TEST_QA -> main
-        uses: cesarh84/TEST_QA@main
+      - name: Merge DEV1 -> main
+        uses: cesarh84/DEV1@main
         with:
           type: now
           target_branch: main
-          message: Merge TEST_GA into main
+          message: Merge DEV1 into main
           github_token: ${{ secrets.GITHUB_TOKEN }}
