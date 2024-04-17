@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge DEV1 -> main
-        uses: cesarh84/ABCTest@main
         with:
           type: now
           from_branch: DEV1
