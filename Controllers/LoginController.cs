@@ -6,7 +6,7 @@ using System.Web.Http;
 namespace Productos.Controllers
 {
     /// <summary>
-    /// login controller clase para autenticar a los usuarios
+    /// login controller clase para autenticar a los usuarios (TEST ACTION)
     /// </summary>
     [AllowAnonymous]
     [RoutePrefix("api/login")]
