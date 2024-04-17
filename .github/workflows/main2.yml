@@ -2,7 +2,7 @@ name: PRs to master
 on: 
   pull_request:
     branches: [DEV1]
-    types: [closed]
+    types: [merged]
 jobs:
   merge-master-back-to-dev:
     if: github.event.pull_request.merged == true
