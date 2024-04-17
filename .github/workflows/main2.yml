@@ -1,8 +1,8 @@
 name: PRs to master
 on: 
   pull_request:
-    branches: [DEV1]
-    types: [merged]
+    branches: [main]
+    types: [closed]
 jobs:
   merge-master-back-to-dev:
     if: github.event.pull_request.merged == true
@@ -12,12 +12,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set Git config
       run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "Github Actions"
+          git config --local user.email "cha@dnu.mx"
+          git config --local user.name "Hohlatcheff Cesar"
     - name: Merge master back to dev
       run: |
           git fetch --unshallow
-          git checkout DEV1
+          git checkout dev
           git pull
           git merge --no-ff main -m "Auto-merge master back to dev"
           git push
